@@ -2,6 +2,10 @@ name: reuse-workflow
 on: push
 jobs:
   build-test-deploy:
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     uses: pietrangelo/actions-learning-pathway/.github/workflows/build-test-deploy.yml@main
     # Passing 'node-version' as an input parameter to the reusable workflow
     with:
